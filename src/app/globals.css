@@ -1,8 +1,54 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Custom font definitions */
+@font-face {
+  font-family: "OpenSauceOne";
+  src: url("/assets/fonts/OpenSauceOne-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "OpenSauceOne";
+  src: url("/assets/fonts/OpenSauceOne-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: "OpenSauceOne";
+  src: url("/assets/fonts/OpenSauceOne-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: "OpenSauceOne";
+  src: url("/assets/fonts/OpenSauceOne-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "WulkanDisplay";
+  src: url("/assets/fonts/WulkanDisplay-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "WulkanDisplay";
+  src: url("/assets/fonts/WulkanDisplay-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: "WulkanDisplay";
+  src: url("/assets/fonts/WulkanDisplay-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: "WulkanDisplay";
+  src: url("/assets/fonts/WulkanDisplay-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
 }
 
 @theme inline {
@@ -10,6 +56,136 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  
+  /* Custom font families */
+  --font-opensauce: "OpenSauceOne", ui-sans-serif, system-ui, sans-serif;
+  --font-wulkan: "WulkanDisplay", ui-serif, Georgia, serif;
+  
+  /* Custom colors */
+  --color-affair: #6E4A92;
+  --color-affair-200: #694C8E;
+  --color-minsk: #553675;
+  --color-smoky: #5F506D;
+  --color-log-cabin: #242220;
+  --color-log-cabin-neutral: #222;
+  --color-wild-sand: #F5F4F1;
+  --color-gulf-blue: #100A55;
+  --color-sea-shell: #F1F1F1;
+  --color-prelude: #d8c6eb;
+  --color-cadet-blue: #AFB7C6;
+  --color-gray-nurse: #E8E9EB;
+  --color-zircon: #F7FBFF;
+  --color-black-squeeze: #F3F9FA;
+  --color-geyser: #CFDFE2;
+  --color-geyser-900: #D4D7E3;
+  --color-bali-hai: #8897AD;
+  --color-solitude: #EAF2FA;
+  --color-alto: #DADADA;
+  --color-comet: #596780;
+  --color-vulcan: #101522;
+  --color-white-lilac: #F7FAFD;
+  --color-link-water: #E0DEF7;
+  --color-gravel: #4C4C4C;
+  --color-trout: #4D5461;
+  --color-mirage: #1A202C;
+  --color-mirage-900: #101828;
+  --color-alabaster: #F9F9F9;
+  --color-alabaster-200: #FAFAFA;
+  --color-blue-chalk: #E8E6FB;
+  --color-tangaroa: #0B163B;
+  --color-screamin-green: #44E955;
+  --color-nevada: #636C7B;
+  --color-suva-gray: #888787;
+  --color-moon-raker: #CDCAF0;
+  --color-magnolia: #F7F0FF;
+  --color-magnolia-200: #f8f1ff;
+  --color-magnolia-600: #F9F5FF;
+  --color-magnolia-800: #f8f7ff;
+  --color-medium-purple: #a662f3;
+  --color-butterfly-bush: #6F4FA3;
+  --color-mine-shaft: #322f2f;
+  --color-mantanee: #9788a5;
+  --color-green-white: #e9e7df;
+  --color-cape-cod: #3B4144;
+  --color-cape-cod-200: #424242;
+  --color-mountain-mist: #949494;
+  --color-ironside-gray: #676767;
+  --color-celeste: #D0D0D0;
+  --color-coral-red: #FF4545;
+  --color-gray: #7e7e7e;
+  --color-quill-gray: #D2D2D2;
+  --color-frog: #4BC839;
+  --color-tahiti-gold: #ea8208;
+  --color-purple-heart: #7c3aed;
+  --color-athens-gray: #F1EDF5;
+  --color-royal-blue: #4A46FD;
+  --color-cararra: #f0ecea;
+  --color-mercury: #E4E4E4;
+  --color-silver-chalice: #aaaaaa;
+  --color-regent-gray: #869099;
+  --color-oslo-gray: #858e92;
+  --color-pale-sky: #6B7280;
+  --color-pale-sky-200: #667085;
+  --color-pale-sky-500: #717680;
+  --color-ebony: #0D0B26;
+  --color-ebony-clay: #1F2937;
+  --color-chateau-green: #22AD5C;
+  --color-aero-blue: #BFFCD8;
+  --color-fiord: #475467;
+  --color-white-lilac-200: #FAF9FF;
+  --color-mystic: #E4E7EC;
+  --color-lilac-bush: #9c6dd3;
+  --color-mystic-200: #E8EAED;
+  --color-mystic-400: #E5E7EB;
+  --color-mischka: #D0D5DD;
+  --color-bunker: #121212;
+  --color-dove-gray: #707070;
+  --color-cerulean-blue: #384EB7;
+  --color-santas-gray: #9CA3AF;
+  --color-woodsmoke: #0F0F0F;
+  --color-steam: #DDDDDD;
+  --color-mourn-mountain-snow: #E9EAEB;
+  --color-iron: #D5D7DA;
+  --color-oxford-blue: #344054;
+  --color-harlequin: #33FF21;
+  --color-cinnabar: #E94235;
+  --color-secret-garden: #17B26A;
+  --color-argent: #888888;
+  --color-white-pointer: #FCFAFF;
+  --color-gray-chateau: #A4A7AE;
+  --color-bright-dusk: #ECE9FB;
+  --color-white-dove: #8A8A8A;
+  --color-bleached-silk: #F2F2F2;
+  --color-emerald-isle: #079455;
+  --color-silver-glitter: #CECFD2;
+  --color-wild-sand-red: #F2F3F5;
+  --color-pickled-bluewood: #313957;
+  --color-concrete: #F3F3F3;
+  --color-whitesmoke: #F5F5F5;
+  --color-beeswax: #fef9c3;
+  --color-rusty-nail: #854d0e;
+  --color-aqua-sneeze: #E8F7F0;
+  --color-dixie-yellow: #E99C1C;
+  --color-my-sin: #fdb022;
+  --color-snow-drift: #F5FAF5;
+  --color-bittersweet: #ff6e6e;
+  --color-roman: #e05c5c;
+  --color-bright-gray: #374151;
+  
+  /* Custom breakpoints */
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1232px;
+  --breakpoint-2xl: 1432px;
+  
+  /* Container configuration */
+  --container-padding: 1rem;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -19,8 +195,53 @@
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-family: var(--font-wulkan);
+  }
+
+  p,
+  span,
+  a,
+  div,
+  li,
+  button,
+  input,
+  textarea,
+  select,
+  option,
+  label,
+  small,
+  strong,
+  b,
+  i,
+  em,
+  cite,
+  code {
+    font-family: var(--font-opensauce);
+  }
+
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--container-padding);
+    padding-right: var(--container-padding);
+  }
+}
+
+@layer utilities {
+  .grid-pattern-background {
+    background-image: linear-gradient(to right, rgba(245,245,245,.5) 1px, transparent 1px), linear-gradient(to bottom, rgba(245,245,245,.5) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
 }

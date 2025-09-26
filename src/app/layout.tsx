@@ -1,16 +1,52 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import localFont from "next/font/local";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+const WulkanDisplay = localFont({
+  src: [
+    {
+      path: "../../public/assets/fonts/WulkanDisplay-Regular.woff2",
+      weight: '400',
+    },
+    {
+      path: "../../public/assets/fonts/WulkanDisplay-Medium.woff2",
+      weight: '500',
+    },
+    {
+      path: "../../public/assets/fonts/WulkanDisplay-SemiBold.woff2",
+      weight: '600',
+    },
+    {
+      path: "../../public/assets/fonts/WulkanDisplay-Bold.woff2",
+      weight: '700',
+    },
+  ],
+  display: 'swap',
+  variable: '--font-wulkan-display',
+})
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const OpenSauceOne = localFont({
+  src: [
+    {
+      path: "../../public/assets/fonts/OpenSauceOne-Regular.woff2",
+      weight: '400',
+    },
+    {
+      path: "../../public/assets/fonts/OpenSauceOne-Medium.woff2",
+      weight: '500',
+    },
+    {
+      path: "../../public/assets/fonts/OpenSauceOne-SemiBold.woff2",
+      weight: '600',
+    },
+    {
+      path: "../../public/assets/fonts/OpenSauceOne-Bold.woff2",
+      weight: '700',
+    },
+  ],
+  display: 'swap',
+  variable: '--font-open-sauce-one',
+})
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -24,10 +60,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+      <body className={`${WulkanDisplay.variable} ${OpenSauceOne.variable} antialiased bg-white`}>
+        <main>
+          {children}
+        </main>
       </body>
     </html>
   );
