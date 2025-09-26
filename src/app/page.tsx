@@ -38,7 +38,7 @@ export default function LandingPage() {
 
             <p className="text-lg md:text-xl text-pale-sky">Weekly email alerts for new construction homes you're interested in</p>
 
-            <button className="flex bg-bittersweet text-white py-3 px-6 rounded-lg font-medium transition-all duration-300 relative hover:translate-y-[-2px] hover:bg-roman">
+            <button className="flex bg-bittersweet text-white py-3 px-6 rounded-lg font-medium transition-all duration-300 relative cursor-pointer hover:translate-y-[-2px] hover:bg-roman">
               Get Started <ArrowRightIcon className="ml-2 h-5 w-5" />
             </button>
 
